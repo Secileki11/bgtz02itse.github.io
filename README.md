@@ -1,1 +1,1 @@
-ITSR 2402 Class
+ITSE 2402 Class
