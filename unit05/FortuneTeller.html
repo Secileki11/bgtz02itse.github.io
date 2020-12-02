@@ -2,22 +2,37 @@
 <html>
 <body>
 
-<h1>Fortue Teller</h1>
+<h1>FortueTeller.html <h1>
 
-<p>X is Job, Y is Place, Z is Married to, N is Number of Children</p>
 
-<p id="demo"></p>
 
+<button onclick="myFunction()">
+<p id="demo">What is Your Future?</p>
+</button>
 <script>
 
-var x = "Chef";
-var y = "New York";
-var z = 5;
-var n = Math.floor(Math.random()*11 );
-document.getElementById("demo").innerHTML =
-"You will be a " +x, "in" +y , "and married to " +z "with " +n "kids.";
+//randomJob, randomLocation, randomWife, kids will ve put in + # + that will make the program run
 
+var jobs = ["Chef", "Construction Worker", "Game Developer" ];
+var random =  Math.floor((Math.random() * jobs.length));
+var randomJob = jobs[random];
 
+var locations = ["New York", "Dallas", "Minesota"];
+var random =  Math.floor((Math.random() * locations.length));
+var randomLocation = locations[random];
+
+var possibleWifes = ["Fatima", "Carla", "Gabby", "Naomi", "Jacky"];
+var random =  Math.floor((Math.random() * possibleWifes.length));
+var randomWife = possibleWifes[random];
+
+var kids = Math.floor(Math.random()*11 );
+
+// On click function
+document.getElementById("demo").onclick = function() {myFunction()};
+function myFunction() 
+{ 
+document.getElementById("demo").innerHTML = "You will be a " + randomJob + " In " + randomLocation + " and married to " + randomWife + " with " + kids + " Kids.";
+}
 </script>
 
 </body>
